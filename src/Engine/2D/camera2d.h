@@ -15,14 +15,14 @@ namespace pg
     struct FollowCamera2D : public Ctor
     {
         FollowCamera2D() {}
-        FollowCamera2D(const FollowCamera2D& other) : viewportWidth(other.viewportWidth), viewportHeight(other.viewportHeight), near(other.near), far(other.far) {}
+        FollowCamera2D(const FollowCamera2D& other) : viewportWidth(other.viewportWidth), viewportHeight(other.viewportHeight), nearPlane(other.nearPlane), farPlane(other.farPlane) {}
 
         FollowCamera2D& operator=(const FollowCamera2D& other)
         {
             viewportWidth = other.viewportWidth;
             viewportHeight = other.viewportHeight;
-            near = other.near;
-            far = other.far;
+            nearPlane = other.nearPlane;
+            farPlane = other.farPlane;
 
             return *this;
         }
